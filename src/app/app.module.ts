@@ -17,6 +17,7 @@ import { NgPrimeModule } from './shared/prime-ng-ui/ng-prime/ng-prime.module';
 import { profileReducer } from './store/profile/profile.reducer';
 import { Avatar2Component } from './avatar2/avatar2.component';
 import { Avatar3Component } from './avatar3/avatar3.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { Avatar3Component } from './avatar3/avatar3.component';
     AvaterComponent,
     Avatar2Component,
     Avatar3Component,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,

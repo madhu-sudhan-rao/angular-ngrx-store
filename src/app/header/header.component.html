@@ -1,0 +1,16 @@
+<div class="grid flex">
+  <div>
+    <app-avater
+      label="{{ profile$ | async }}"
+      shape="circle"
+      size="large"
+    ></app-avater>
+  </div>
+  <div>
+    <app-avatar2></app-avatar2>
+  </div>
+  <div>
+    <app-avatar3></app-avatar3>
+  </div>
+</div>
+<button pButton (click)="updateProfile()">Update</button>

@@ -24,11 +24,11 @@ export class CounterEffects{
         ofType(increment, decrement),
         withLatestFrom(this.store.select('counter')),
         tap(
-            ([action, counter])=>{
-                console.log(action);
-                console.log(counter);
-                // console.log(data[1]);
-                localStorage.setItem('count', counter.toString())
+            (data)=>{
+                console.log(data);
+                console.log(data[0]);
+                console.log(data[1]);
+                localStorage.setItem('count', data[1].toString())
                 
             }
         )
