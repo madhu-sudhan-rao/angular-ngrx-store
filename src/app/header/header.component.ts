@@ -25,9 +25,7 @@ export class HeaderComponent {
 
   updateProfile(){
     let letter =  this.randomLetter();
-    this.store.dispatch(update({value: letter}))
-    console.log(this.profile$);
-    
+    this.store.dispatch(update({value: letter}))    
   }
 
   randomLetter(){
