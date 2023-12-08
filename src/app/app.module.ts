@@ -10,25 +10,38 @@ import { CounterOutputComponent } from './counter-output/counter-output.componen
 import { counterReducer } from './store/counter.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './store/counter.effects';
+import { AvaterComponent } from './shared/components/avater/avater.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
+import { CommonModule } from '@angular/common';
+import { NgPrimeModule } from './shared/prime-ng-ui/ng-prime/ng-prime.module';
+import { profileReducer } from './store/profile/profile.reducer';
+import { Avatar2Component } from './avatar2/avatar2.component';
+import { Avatar3Component } from './avatar3/avatar3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterControlsComponent,
-    CounterOutputComponent
+    CounterOutputComponent,
+    AvaterComponent,
+    Avatar2Component,
+    Avatar3Component,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      counter: counterReducer
+      counter: counterReducer,
+      updateProfile: profileReducer
     }),
     EffectsModule.forRoot([
       CounterEffects,
-    ])
+    ]),
+    NgPrimeModule
   ],
-  providers: [],
+  providers: [],  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
